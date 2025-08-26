@@ -1,0 +1,78 @@
+/* Base resets */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theming */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --primary-color: #0078d7;
+  --secondary-color: #f0f0f0;
+  --border-radius: 8px;
+  --menu-line: #000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --primary-color: #3399ff;
+  --secondary-color: #1e1e1e;
+  --menu-line: #fff;
+}
+
+/* Headings */
+h1, h2 {
+  margin-top: 0;
+}
+
+/* Buttons */
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: var(--border-radius);
+  background: var(--primary-color);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* Inputs + Textareas */
+input, textarea {
+  padding: 6px;
+  border: 1px solid #ab2a2a;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Sections */
+section, .card {
+  background: var(--secondary-color);
+  padding: 16px;
+  border-radius: var(--border-radius);
+  margin: 12px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
